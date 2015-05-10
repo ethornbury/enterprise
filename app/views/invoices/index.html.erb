@@ -3,11 +3,12 @@
   <h1>Listing invoices</h1>
  
   <div class="pull-right range-query">
-    <%= form_tag invoices_path, method: :get do %>
-      <%= text_field_tag 'search[date_from]', @search.date_from, :placeholder => "text" %>
-      <%= text_field_tag 'search[date_to]', @search.date_to %>
-      <%= submit_tag 'Search', class: 'btn search-button' %>
-    <% end %>
+    reconnect search
+    <%#= form_tag invoices_path, method: :get do %>
+      <%#= text_field_tag 'search[date_from]', @search.date_from, :placeholder => "text" %>
+      <%#= text_field_tag 'search[date_to]', @search.date_to %>
+      <%#= submit_tag 'Search', class: 'btn search-button' %>
+    <% #end %>
   </div>
 </div>  
     
@@ -32,7 +33,11 @@
                 <td><%= invoice.date.strftime("%Y-%m-%d") %></td>
                 <td><%= invoice.company %></td>
                 <td><%= invoice.tax %></td>
-                <td><%= invoice.employee_id %></td>
+                <td>
+                  <% if invoice.employee %>
+                  <%= invoice.employee.name %>
+                  <%  end %>
+                </td>
                 <td><%= invoice.status_type %></td>
                 <td><%= link_to 'Show', invoice, class: 'btn btn-mini' %></td>
                 <td><%= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-mini btn-success' %></td>
