@@ -9,8 +9,8 @@ class InvoiceSearch
 
     end
     def scope
-       #Invoice.where('date BETWEEN ? AND ?', @date_from, @date_to)
-       Invoice.find(:all, :conditions => ['date >= ? and date <= ?', params[:date_from], params[:date_to]])
+       Invoice.where('date BETWEEN ? AND ?', @date_from, @date_to)
+       #Invoice.find(:all, :conditions => ['date >= ? and date <= ?', params[:date_from], params[:date_to]])
     end
     
     private
