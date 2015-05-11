@@ -28,6 +28,7 @@
           <th>Name</th>
           <th>Category</th>
           <th>Quantity</th>
+          <th>Price</th>
           <th>Delete</th>
         </tr>
       </thead>
@@ -37,6 +38,7 @@
           <td><h4><%= purchase.name %></h4></td>
           <td><h4><%= purchase.category %></h4></td>
           <td><h4><%= purchase.quantity %></h4></td>
+          <td><h4><%= number_to_currency(purchase.price, unit: "€") %></h4></td>
           <td><h4><%= link_to "Delete", [@invoice, purchase], method: :delete, confirm: "Are you sure to go ahead and delete?" %></h4></td>
        
         </tr>
