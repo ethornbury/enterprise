@@ -4,3 +4,58 @@
     margin-top:4px;
     
 }
+
+.jumbotron{
+  
+  background-image: url("water.jpg");
+  background-repeat:no-repeat;
+
+}
+
+.emertron{
+  width:60%;
+  height:370px;
+  background-repeat:no-repeat;
+  background-image: url("water.jpg");
+  margin: 0 auto;
+  padding:10%;
+}
+
+.op-write{
+    opacity: 0.7 ;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 10em;
+   
+}
+
+/* footer */
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #a3a3a3;
+  color: #777;
+  a {
+    color: #555;
+    &:hover {
+      color: #c4c4c4;
+    }
+  }
+  /*
+  small {
+    float: left;
+  }
+  */
+  
+  
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+  
+}
