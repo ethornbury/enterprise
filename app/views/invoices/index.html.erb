@@ -33,9 +33,9 @@
                 <td><%= invoice.company %></td>
                 <td><%= invoice.tax %></td>
                 <td>
-                  <%# if invoice.employee %><%# search scope messes this up and seems to make it necessary %>
+                  <% if invoice.employee %><%# search scope messes this up and seems to make it necessary %>
                   <%= invoice.employee.name %>
-                  <%# end %>
+                  <% end %>
                 </td>
                 <td><%= invoice.status_type %></td>
                 <td><%= link_to 'Show', invoice, class: 'btn btn-mini' %></td>
