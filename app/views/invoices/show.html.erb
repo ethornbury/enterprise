@@ -41,7 +41,7 @@
           <td><h4><%= purchase.category %></h4></td>
           <td><h4><%= purchase.quantity %></h4></td>
           <td><h4><%= number_to_currency(purchase.price, unit: "€") %></h4></td>
-          <td><h4><%= number_to_currency(purchase.quantity * purchase.price , unit: "€") %></h4></td>
+          <td><h4><%= number_to_currency(purchase.quantity * purchase.price, unit: "€") %></h4></td>
           
           <td><h4><%= link_to "Delete", [@invoice, purchase], :data => {confirm: "Confirm to go ahead and delete?" }, method: :delete %></h4></td>
        

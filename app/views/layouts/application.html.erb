@@ -8,18 +8,20 @@
   </head>
   <body>
     <div class="container">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs nav-fixed-top">
          <li>  <%= link_to "Home", root_path %></li>  
          <li>  <%= link_to "About", welcome_about_path %></li>  
          <li>  <%= link_to "Features", welcome_features_path %></li>  
          <li>  <%= link_to "FAQs", welcome_faq_path %></li>  
          <li>  <%= link_to "Pricing", welcome_pricing_path %></li>  
          <li>  <%= link_to "Contact", welcome_contact_path %></li>  
-         
+         <p class="navbar-text"><% current_user.email %></p>
          <% if current_user %>
-           <li>  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>  
+           <li>  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+           
+           
             <div class="btn-group pull-right right-nav">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
                    <span class="caret"></span> 
                    <span class="sr-only">Admin</span>
                  </button>

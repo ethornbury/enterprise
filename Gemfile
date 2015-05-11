@@ -47,3 +47,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'devise'
+gem 'quiet_assets', group: :development
